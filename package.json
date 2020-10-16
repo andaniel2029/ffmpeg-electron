@@ -1,0 +1,109 @@
+{
+  "name": "FFMPEG-Test",
+  "version": "0.0.1",
+  "author": "someone",
+  "homepage": "https://ionicframework.com/",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --open",
+    "build": "ng build --base-href ./",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "dev": "yarn run build && electron .",
+    "build:electron": "npm run build && electron-builder"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "~8.1.2",
+    "@angular/core": "~8.1.2",
+    "@angular/forms": "~8.1.2",
+    "@angular/platform-browser": "~8.1.2",
+    "@angular/platform-browser-dynamic": "~8.1.2",
+    "@angular/router": "~8.1.2",
+    "@ionic-native/core": "^5.0.0",
+    "@ionic-native/file": "^5.28.0",
+    "@ionic-native/splash-screen": "^5.0.0",
+    "@ionic-native/status-bar": "^5.0.0",
+    "@ionic/angular": "^5.0.0",
+    "cordova-android": "9.0.0",
+    "cordova-browser": "6.0.0",
+    "ffmpeg-audiobuffer-stream": "^1.0.0",
+    "ffmpeg-static": "^4.2.7",
+    "fluent-ffmpeg": "^2.1.2",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.802.2",
+    "@angular/cli": "~8.1.2",
+    "@angular/compiler": "~8.1.2",
+    "@angular/compiler-cli": "~8.1.2",
+    "@angular/language-service": "~8.1.2",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@ionic/angular-toolkit": "^2.3.0",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^4.2.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "electron": "^7.3.3",
+    "electron-builder": "^22.8.1",
+    "foreman": "^3.0.1",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "3.4.3"
+  },
+  "description": "A Test App",
+  "main": "electron/electron.js",
+  "config": {
+    "ionic_bundler": "webpack",
+    "ionic_webpack": "./config/webpack.config.js"
+  },
+  "build": {
+    "directories": {
+      "output": "dist"
+    },
+    "appId": "com.lohanitech.ionic-electron-test",
+    "electronVersion": "7.3.3",
+    "asar": false,
+    "files": [
+      "www/**/*",
+      "electron/*"
+    ]
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-file": {}
+    },
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}

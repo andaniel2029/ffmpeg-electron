@@ -1,0 +1,7 @@
+{
+  "name": "FFMPEG-Test",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

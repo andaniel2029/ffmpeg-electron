@@ -1,0 +1,43 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "downlevelIteration": true,
+    "paths": {
+      "@root/*": ["./*"],
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@theme/*": ["src/theme/*"],
+      "@env/*": ["src/environments/*"],
+      "@core/*": ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@utils/*": ["src/app/core/utils/*"],
+      "@user/*": ["src/app/user/*"],
+      "@store/*": ["src/app/core/store/*"],
+      "@desktop/*": ["src/app/user/desktop/*"],
+      "@mobile/*": ["src/app/user/mobile/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ESNext",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

@@ -1,0 +1,21 @@
+<ion-content>
+  <div id="container">
+  	<div class="inner">
+  		<svg width="100%" height="40" id="svg"></svg>    
+  		<!--<svg width="100%" height="80" id="svg-bpm"></svg>-->
+  		<div id="waveform"></div>
+  		<div id="text"></div>                
+    	<ion-button (click)="stop()"><ion-icon name="square"></ion-icon></ion-button>
+    	<ion-button color="danger" (click)="clear()">Clear</ion-button>
+    </div>
+    <ion-list>
+      <ion-item *ngFor="let track of tracks" (click)="play($event, track)">
+        <span style="font-size: 14px;">
+          Type: {{track.type}}<br>
+          Url: {{track.url}}
+        </span>
+        <hr />
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
